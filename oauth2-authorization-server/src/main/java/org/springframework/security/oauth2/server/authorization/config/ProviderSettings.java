@@ -21,6 +21,8 @@ import java.util.Map;
 /**
  * A facility for provider configuration settings.
  *
+ * 这里是设置各种端点信息的地方，也是对外暴露的，可以调用这里的端点
+ *
  * @author Daniel Garnier-Moiroux
  * @since 0.1.0
  * @see Settings
@@ -37,6 +39,9 @@ public class ProviderSettings extends Settings {
 
 	/**
 	 * Constructs a {@code ProviderSettings}.
+	 *
+	 * setting default provider, inorder to setting endpoint information
+	 *
 	 */
 	public ProviderSettings() {
 		this(defaultSettings());
@@ -178,7 +183,7 @@ public class ProviderSettings extends Settings {
 	 * Sets the Provider's OpenID Connect 1.0 Client Registration endpoint.
 	 *
 	 * @param oidcClientRegistrationEndpoint the OpenID Connect 1.0 Client Registration endpoint
-	 * @return the {@link ProviderSettings} for further configuration
+	 * @return the {@link ProviderSettings} for further configurationFFFFFF
 	 */
 	public ProviderSettings oidcClientRegistrationEndpoint(String oidcClientRegistrationEndpoint) {
 		return setting(OIDC_CLIENT_REGISTRATION_ENDPOINT, oidcClientRegistrationEndpoint);
